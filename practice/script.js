@@ -1,2 +1,1 @@
-const amIFat = true;
-console.log(amIFat);
+alert("자바스크립트!");
