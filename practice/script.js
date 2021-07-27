@@ -1,17 +1,20 @@
+let x = prompt("x?", '');
+let n = prompt("n?", '');
 
-let x = +prompt("x");
-let y = +prompt("y");
-
-while (y < 1) {
-  y = +prompt("y는 1보다 크거나 같아야 합니다.");
+if (n <= 0) {
+  alert(`Power ${n} is not supported, 
+      please enter an integer number 
+      greater than zero`);
+} else {
+  alert( pow(x, n) );
 }
 
-alert(pow(x, y));
 function pow(x, n) {
-  let answer = x;
+  let result = 1;
 
-  for (let i = 1; i < n; i++) {
-    answer *= x;
+  for (let i=0; i<n; i++) {
+    result *= x;
   }
-  return answer;
+
+  return result;
 }
