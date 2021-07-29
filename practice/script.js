@@ -1,20 +1,27 @@
-let x = prompt("x?", '');
-let n = prompt("n?", '');
+const h2 = document.querySelector(".cool");
 
-if (n <= 0) {
-  alert(`Power ${n} is not supported, 
-      please enter an integer number 
-      greater than zero`);
-} else {
-  alert( pow(x, n) );
+h2.addEventListener("mouseenter", handlerMouseenter);
+h2.addEventListener("mouseleave", handlerMouseleave);
+
+window.addEventListener("resize", handlerResize);
+window.addEventListener("contextmenu", handlerContextmenu);
+
+function handlerMouseenter() {
+    h2.innerText = "The mouse is here!";
+    h2.style.color = "tomato";
 }
 
-function pow(x, n) {
-  let result = 1;
+function handlerMouseleave() {
+    h2.innerText = "The mouse is leave";
+    h2.style.color = "blue";
+}
 
-  for (let i=0; i<n; i++) {
-    result *= x;
-  }
+function handlerResize() {
+    h2.innerText = "you just resized!";
+    h2.style.color = "orange";
+}
 
-  return result;
+function handlerContextmenu() {
+    h2.innerText = "That was a right click!";
+    h2.style.color = "green";
 }
