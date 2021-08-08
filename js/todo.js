@@ -28,7 +28,7 @@ function handleTodoSubmit(event) {
   const newTodo = todoInput.value;
   const newTodoObj = {
     text: newTodo,
-    id: Date.now()
+    id: Date.now(),
   };
   todoInput.value = "";
   todos.push(newTodoObj);
@@ -39,21 +39,16 @@ function handleTodoSubmit(event) {
 function deleteTodo(event) {
   const li = event.target.parentElement;
   li.remove();
+  todos = todos.filter((item) => item.id !== parseInt(li.id));
+  saveTodos();
 }
 
 todoForm.addEventListener("submit", handleTodoSubmit);
 
-
 const savedTodos = localStorage.getItem(TODOS_KEY);
 
-if(savedTodos) {
+if (savedTodos) {
   const parsedTodos = JSON.parse(savedTodos);
   todos = parsedTodos;
   parsedTodos.forEach(paintTodo);
 }
-
-function sexyFilter(todo, ) {
-  return todo.id !== 
-}
-
-todos.filter(sexyFilter)
