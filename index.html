@@ -8,7 +8,14 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h2 id="clock"></h2>
+    <header>
+      <h2 id="clock"></h2>
+      <div id="weather">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
     <form class="hidden" id="login-form">
       <input
         type="text"
@@ -31,11 +38,7 @@
       />
     </form>
     <ul id="todo-list"></ul>
-    <div id="weather">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+
     <script src="js/app.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/todo.js"></script>
