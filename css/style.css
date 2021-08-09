@@ -54,8 +54,16 @@ header {
 }
 
 #login-form input:first-child:hover {
-  opacity: 1;
+  opacity: 0.8;
   transition: ease-in-out 0.8s;
+  background-color: gainsboro;
+}
+
+#login-form input:first-child::placeholder {
+  opacity: 0.8;
+  transition: ease-in-out 0.8s;
+  color: black;
+  font-weight: 800;
 }
 
 #login-form input:last-child {
@@ -75,7 +83,7 @@ header {
 #quote {
   position: absolute;
   bottom: 2rem;
-  left: 3rem;
+  left: 1rem;
 }
 
 #quote span:first-child {
@@ -96,4 +104,38 @@ header {
   border-radius: 15px;
   opacity: 0.6;
   box-shadow: 3px 3px;
+}
+
+#todo-form input:hover {
+  opacity: 0.8;
+  transition: ease-in-out 0.8s;
+  background-color: gainsboro;
+}
+
+#todo-form input:hover::placeholder {
+  opacity: 0.8;
+  transition: ease-in-out 0.8s;
+  color: black;
+  font-weight: 800;
+}
+
+#todo-list {
+  margin-top: 2rem;
+  margin-left: 3rem;
+  color: sandybrown;
+  font-size: 1.3rem;
+}
+
+#todo-list li {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+#todo-list li span {
+  margin-right: 20px;
+}
+
+#todo-list li button {
+  background: brown;
+  opacity: 0.8;
 }
