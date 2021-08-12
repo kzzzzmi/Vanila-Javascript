@@ -1,2 +1,2 @@
 # vanila-javascript
-TodoList
+Todo List
